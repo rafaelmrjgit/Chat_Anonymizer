@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Anonimizador de Chat</string>
+    <string name="header_instructions">Importe sua conversa do WhatsApp (.txt) para anonimizá-la. Todos os dados são processados localmente.</string>
+    <string name="btn_import">Importar Conversa (.txt)</string>
+    <string name="switch_mask_urls">Mascarar URLs</string>
+    <string name="switch_remove_timestamps">Remover Timestamps</string>
+    <string name="btn_save">Salvar</string>
+    <string name="btn_share">Compartilhar</string>
+    <string name="msg_processing">Anonimizando conversa…</string>
+    <string name="msg_error_import">Erro ao importar arquivo.</string>
+    <string name="msg_success_save">Salvo com sucesso.</string>
+    <string name="placeholder_email">[EMAIL]</string>
+    <string name="placeholder_url">[URL]</string>
+    <string name="placeholder_phone">[TELEFONE %1$d]</string>
+    <string name="participant_prefix">Pessoa</string>
+</resources>
