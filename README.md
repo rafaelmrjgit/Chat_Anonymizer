@@ -1,6 +1,6 @@
 # Chat Anonymizer 🛡️
 
-[English (US)](#english) | [Português (BR)](#portugues)
+[English (US)](#english) | [Português (BR)](#português)
 
 ---
 ## English
