@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.ChatAnonymizer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Definição do fundo da Splash Screen para aparelhos API 31+ -->
+        <item name="android:windowSplashScreenBackground">@color/ic_launcher_background</item>
+    </style>
+</resources>
