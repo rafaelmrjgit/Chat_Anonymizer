@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Anonimizador de Chat</string>
-    <string name="header_instructions">Importe sua conversa do WhatsApp (.txt) para anonimizá-la. Todos os dados são processados localmente.</string>
+    <string name="header_instructions">Anonimizar conversa do WhatsApp</string>
     <string name="btn_import">Importar Conversa (.txt)</string>
     <string name="switch_mask_urls">Mascarar URLs</string>
     <string name="switch_remove_timestamps">Remover Timestamps</string>
+    <string name="switch_remove_system_messages">Remover mensagens do WhatsApp</string>
     <string name="btn_save">Salvar</string>
     <string name="btn_share">Compartilhar</string>
     <string name="msg_processing">Anonimizando conversa…</string>
@@ -13,4 +14,8 @@
     <string name="placeholder_url">[URL]</string>
     <string name="placeholder_phone">[TELEFONE %1$d]</string>
     <string name="participant_prefix">Pessoa</string>
+    <string name="pre_visualizacao">O texto vai aparecer aqui.</string>
+    <string name="anonymizer_rules">Regras de anonimização</string>
+    <string name="anonymizer_rules2">São automaticamente anonimizados: A, B, C.</string>
+
 </resources>

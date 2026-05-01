@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val lines = withContext(Dispatchers.IO) {
                     contentResolver.openInputStream(uri)?.use { stream ->
-                        // FORÇAMOS A LEITURA EM UTF-8
+                        // força a leitura utf-8
                         BufferedReader(InputStreamReader(stream, Charsets.UTF_8)).readLines()
                     } ?: emptyList()
                 }
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI() {
         if (anonymizedLines.isNotEmpty()) {
             binding.rvPreview.visibility = View.VISIBLE
-            binding.layoutActions.visibility = View.VISIBLE
+            binding.cardViewResult.visibility = View.VISIBLE
             binding.rvPreview.layoutManager = LinearLayoutManager(this)
             binding.rvPreview.adapter = ChatAdapter(anonymizedLines)
         }

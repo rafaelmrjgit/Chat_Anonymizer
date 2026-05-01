@@ -7,7 +7,10 @@
     <color name="primary">#A8C7FA</color>
     <color name="on_primary">#062E6F</color>
     <color name="secondary">#7CACF8</color>
+    <color name="tertiary">#25D366</color>
     <color name="text_primary">#E3E3E3</color>
     <color name="text_secondary">#C4C7C5</color>
     <color name="ic_launcher_background">#25D366</color>
+    <color name="colorAccent">#25D366</color>
+
 </resources>
