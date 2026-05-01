@@ -3,10 +3,13 @@ package com.rma.chatanonymizer
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rma.chatanonymizer.databinding.ActivityMainBinding
@@ -41,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
         setupListeners()
     }
 
@@ -135,5 +139,51 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        // recupera o estado do item de menu
+        val themeItem = menu?.findItem(R.id.action_theme)
+
+        // verifica se o modo noturno está ativo
+        val isNightMode = resources.configuration.uiMode and
+                android.content.res.Configuration.UI_MODE_NIGHT_MASK ==
+                android.content.res.Configuration.UI_MODE_NIGHT_YES
+
+        // define o ícone com base no estado atual
+        if (isNightMode) {
+            themeItem?.setIcon(R.drawable.ic_light_mode_24dp)
+        } else {
+            themeItem?.setIcon(R.drawable.ic_dark_mode_24dp)
+        }
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_theme -> {
+                //modo noturno está ativo no sistema?
+                val isNightModeActive = resources.configuration.uiMode and
+                        android.content.res.Configuration.UI_MODE_NIGHT_MASK ==
+                        android.content.res.Configuration.UI_MODE_NIGHT_YES
+                if (isNightModeActive) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                }
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+/*
+MODE_NIGHT_YES (Forçou Escuro)
+MODE_NIGHT_NO (Forçou Claro)
+MODE_NIGHT_FOLLOW_SYSTEM (Está seguindo o sistema)
+MODE_NIGHT_UNSPECIFIED (Valor padrão inicial, geralmente significa que nada foi definido ainda).
+* */
+
 }
 

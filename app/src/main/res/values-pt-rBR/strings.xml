@@ -17,5 +17,6 @@
     <string name="pre_visualizacao">O texto vai aparecer aqui.</string>
     <string name="anonymizer_rules">Regras de anonimização</string>
     <string name="anonymizer_rules2">São automaticamente anonimizados: A, B, C.</string>
+    <string name="app_theme">Tema</string>
 
 </resources>
