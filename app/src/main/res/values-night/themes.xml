@@ -1,7 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
     <style name="Base.Theme.ChatAnonymizer" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Cores Principais -->
+        <item name="colorPrimary">@color/wa_green_light_accent</item>
+        <item name="colorOnPrimary">@color/wa_bg_dark</item>
+        <item name="colorSecondaryContainer">@color/wa_green_light_accent</item>
+        <item name="colorOnSecondaryContainer">@color/wa_bg_dark</item>
+
+        <!-- Superfícies -->
+        <item name="colorSurface">@color/wa_surface_dark</item>
+        <item name="colorOnSurface">@color/wa_on_surface_dark</item>
+        <item name="colorSurfaceVariant">@color/wa_bg_dark</item>
+        <item name="colorOnSurfaceVariant">@color/grey_text_dark</item>
+
+        <!-- Fundo -->
+        <item name="android:windowBackground">@color/wa_bg_dark</item>
+
+        <!-- Textos Secundários -->
+        <item name="colorOutline">@color/grey_text_dark</item>
+
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/ic_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/ic_launcher_foreground</item>
     </style>
 </resources>

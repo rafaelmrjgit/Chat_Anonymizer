@@ -1,27 +1,85 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
     <style name="Base.Theme.ChatAnonymizer" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@color/dark_background</item>
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/on_primary</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorTertiary">@color/tertiary</item>
-        <item name="android:textColorPrimary">@color/text_primary</item>
-        <item name="android:textColorSecondary">@color/text_secondary</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Cores Principais -->
+        <item name="colorPrimary">@color/wa_green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/wa_green_primary</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+
+        <!-- Superfícies (Cards, Diálogos) -->
+        <item name="colorSurface">@color/wa_surface_light</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorSurfaceVariant">@color/wa_bg_light</item>
+        <item name="colorOnSurfaceVariant">@color/grey_text_light</item>
+
+        <!-- Fundo da Activity -->
+        <item name="android:windowBackground">@color/wa_bg_light</item>
+
+        <!-- Textos Secundários -->
+        <item name="colorOutline">@color/grey_text_light</item>
+
+        <!-- Tipografia Global (Material 3) -->
+        <item name="textAppearanceHeadlineSmall">@style/AppHeadlineSmall</item>
+        <item name="textAppearanceTitleMedium">@style/AppTitleMedium</item>
+        <item name="textAppearanceBodyLarge">@style/AppBodyLarge</item>
+        <item name="textAppearanceLabelMedium">@style/AppLabelMedium</item>
+
+        <!-- Estilos Globais de Componentes -->
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+        <item name="materialSwitchStyle">@style/Widget.App.Switch</item>
+        <item name="materialButtonStyle">@style/botaoCustomizado</item>
+
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/ic_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/ic_launcher_foreground</item>
     </style>
 
-    <style name="botaoCustomizado" parent="Widget.Material3.Button.ElevatedButton">
-        <item name="android:padding">8dp</item>
-        <item name="android:textSize">16sp</item>
-        <item name="cornerRadius">8dp</item>
-        <item name="android:elevation">8dp</item>
-        <item name="android:stateListAnimator">@null</item>
+    <!-- Estilo Global para Cards -->
+    <style name="Widget.App.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
     </style>
 
-    <style name="TextoTitulo" parent="TextAppearance.Material3.HeadlineSmall">
+    <!-- Estilo Global para Switches -->
+    <style name="Widget.App.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:textAppearance">?attr/textAppearanceBodyLarge</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+    </style>
+
+    <!-- Tipografia detalhada com cores dinâmicas -->
+    <style name="AppHeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">@dimen/text_headline</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="AppTitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="AppBodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="AppLabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <!-- Estilo customizado para botões -->
+    <style name="botaoCustomizado" parent="Widget.Material3.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.ChatAnonymizer.Button</item>
+        <item name="android:paddingTop">@dimen/spacing_small</item>
+        <item name="android:paddingBottom">@dimen/spacing_small</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+    </style>
+
+    <style name="ShapeAppearance.ChatAnonymizer.Button" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/card_corner_radius</item>
     </style>
 
     <style name="Theme.ChatAnonymizer" parent="Base.Theme.ChatAnonymizer" />

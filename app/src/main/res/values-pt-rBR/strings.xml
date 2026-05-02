@@ -1,22 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Anonimizador de Chat</string>
-    <string name="header_instructions">Anonimizar conversa do WhatsApp</string>
-    <string name="btn_import">Importar Conversa (.txt)</string>
+    <string name="app_name">Chat Anonymizer</string>
+    <string name="header_instructions">Anonimize conversas do WhatsApp</string>
+    <string name="btn_import">Importar conversa (.txt)</string>
     <string name="switch_mask_urls">Mascarar URLs</string>
     <string name="switch_remove_timestamps">Remover Timestamps</string>
-    <string name="switch_remove_system_messages">Remover mensagens do WhatsApp</string>
+    <string name="switch_remove_system_messages">Remover mensagens de sistema do WhatsApp</string>
     <string name="btn_save">Salvar</string>
     <string name="btn_share">Compartilhar</string>
-    <string name="msg_processing">Anonimizando conversa…</string>
-    <string name="msg_error_import">Erro ao importar arquivo.</string>
-    <string name="msg_success_save">Salvo com sucesso.</string>
+    <string name="msg_processing">Anonimizando conversa...</string>
+    <string name="msg_error_import">Erro ao importar arquivo</string>
+    <string name="msg_success_save">Salvo com sucesso</string>
     <string name="placeholder_email">[EMAIL]</string>
     <string name="placeholder_url">[URL]</string>
     <string name="placeholder_phone">[TELEFONE %1$d]</string>
     <string name="participant_prefix">Pessoa</string>
-    <string name="pre_visualizacao">O texto vai aparecer aqui.</string>
     <string name="anonymizer_rules">Regras de anonimização</string>
-    <string name="anonymizer_rules2">São automaticamente anonimizados: A, B, C.</string>
+    <string name="anonymizer_rules2">São automaticamente anonimizados: nomes de participantes, números de telefone, e-mails, menções e mensagens de sistema do WhatsApp.</string>
     <string name="app_theme">Tema</string>
-
+    <string name="default_filename">conversa_anonimizada.txt</string>
+    <string name="msg_error_save">Erro ao salvar arquivo</string>
 </resources>

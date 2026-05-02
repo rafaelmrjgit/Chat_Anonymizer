@@ -1,24 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Chat Anonymizer</string>
-    <string name="header_instructions">Anonimizar conversa do WhatsApp</string>
+    <string name="header_instructions">Anonymize WhatsApp conversation</string>
     <string name="btn_import">Import chat (.txt)</string>
     <string name="switch_mask_urls">Mask URLs</string>
-    <string name="switch_remove_timestamps">Remove Timestamps</string>
-    <string name="switch_remove_system_messages">Remove WhatsApp Messages</string>
+    <string name="switch_remove_timestamps">Remove timestamps</string>
+    <string name="switch_remove_system_messages">Remove WhatsApp system messages</string>
     <string name="btn_save">Save</string>
     <string name="btn_share">Share</string>
     <string name="msg_processing">Anonymizing conversation...</string>
-    <string name="msg_error_import">Error importing file.</string>
-    <string name="msg_success_save">Saved successfully.</string>
+    <string name="msg_error_import">Error importing file</string>
+    <string name="msg_success_save">Saved successfully</string>
     <string name="placeholder_email">[EMAIL]</string>
     <string name="placeholder_url">[URL]</string>
     <string name="placeholder_phone">[PHONE %1$d]</string>
     <string name="participant_prefix">Person</string>
-    <string name="pre_visualizacao">Pre visualization.</string>
-    <string name="anonymizer_rules">Anomymizer rules</string>
-    <string name="anonymizer_rules2">São automaticamente anonimizados: A, B, C.</string>
+    <string name="anonymizer_rules">Anonymizer rules</string>
+    <string name="anonymizer_rules2">The following are automatically anonymized: participant names, phone numbers, emails, mentions, and WhatsApp system messages.</string>
     <string name="app_theme">Theme</string>
-
-
-
+    <string name="default_filename">anonymized_chat.txt</string>
+    <string name="msg_error_save">Error saving file</string>
 </resources>

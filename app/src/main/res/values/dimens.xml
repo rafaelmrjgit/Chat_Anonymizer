@@ -1,30 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="margem_0dp">0dp</dimen>
-    <dimen name="texto_16sp">16sp</dimen>
-    <dimen name="padding_5dp">5dp</dimen>
-    <dimen name="padding_10dp">10dp</dimen>
-
-    <dimen name="nav_header_vertical_spacing">10dp</dimen>
-    <dimen name="nav_header_height">176dp</dimen>
+    <!-- spacing -->
+    <dimen name="spacing_none">0dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <!-- spacing end  -->
 
 
-    <dimen name="text_size_small">12sp</dimen>
-    <dimen name="text_size">14sp</dimen>
-    <dimen name="text_size_titulo">16sp</dimen>
-    <dimen name="toolbar_text_size">18sp</dimen>
-    <dimen name="text_size_600_small">16sp</dimen>
-    <dimen name="text_size_600">20sp</dimen>
-    <dimen name="text_size_600_menu">18sp</dimen>
-    <dimen name="text_size_600_hint">15sp</dimen>
-    <dimen name="text_size_600_titulo">24sp</dimen>
-    <dimen name="toolbar_text_size_600">22sp</dimen>
-    <dimen name="text_size_720_small">20sp</dimen>
-    <dimen name="text_size_720">26sp</dimen>
-    <dimen name="text_size_720_menu">24sp</dimen>
-    <dimen name="text_size_720_hint">20sp</dimen>
-    <dimen name="text_size_720_titulo">30sp</dimen>
-    <dimen name="toolbar_text_size_720">26sp</dimen>
+    <!-- components -->
+    <!-- cards -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <!-- buttons -->
+    <dimen name="button_min_height">48dp</dimen>
+    <dimen name="button_icon_size">24dp</dimen>
+    <!-- recyclerview / lists -->
+    <dimen name="chat_height">300dp</dimen>
+    <!-- components end  -->
+
+
+    <!-- text size -->
+    <dimen name="text_display">40sp</dimen>
+    <dimen name="text_headline">28sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_label">11sp</dimen>
+    <!-- text size end -->
 
 </resources>

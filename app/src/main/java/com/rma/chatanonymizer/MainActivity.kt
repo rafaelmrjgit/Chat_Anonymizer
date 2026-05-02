@@ -1,5 +1,6 @@
 package com.rma.chatanonymizer
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.edit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rma.chatanonymizer.databinding.ActivityMainBinding
@@ -40,13 +42,18 @@ class MainActivity : AppCompatActivity() {
             uri?.let { writeFile(it) }
         }
 
+    private val prefs by lazy { getSharedPreferences("themes_config", Context.MODE_PRIVATE) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        val lightDarkMode = prefs.getInt("light_dark_mode", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        AppCompatDelegate.setDefaultNightMode(lightDarkMode)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         setupListeners()
     }
+
 
     private fun setupListeners() {
         binding.btnImport.setOnClickListener {
@@ -60,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnSave.setOnClickListener {
             if (anonymizedLines.isNotEmpty()) {
                 // Abre o seletor do Android para o usuário escolher onde salvar
-                saveLauncher.launch("conversa_anonimizada.txt")
+                saveLauncher.launch(getString(R.string.default_filename))
             }
         }
     }
@@ -135,7 +142,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 Toast.makeText(this@MainActivity, R.string.msg_success_save, Toast.LENGTH_SHORT).show()
             } catch (e: Exception) {
-                Toast.makeText(this@MainActivity, "Erro ao salvar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, R.string.msg_error_save, Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -157,7 +164,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             themeItem?.setIcon(R.drawable.ic_dark_mode_24dp)
         }
-
         return true
     }
 
@@ -170,20 +176,16 @@ class MainActivity : AppCompatActivity() {
                         android.content.res.Configuration.UI_MODE_NIGHT_YES
                 if (isNightModeActive) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    prefs.edit {putInt("light_dark_mode", AppCompatDelegate.MODE_NIGHT_NO)}
                 }else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    prefs.edit {putInt("light_dark_mode", AppCompatDelegate.MODE_NIGHT_YES)}
                 }
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
-/*
-MODE_NIGHT_YES (Forçou Escuro)
-MODE_NIGHT_NO (Forçou Claro)
-MODE_NIGHT_FOLLOW_SYSTEM (Está seguindo o sistema)
-MODE_NIGHT_UNSPECIFIED (Valor padrão inicial, geralmente significa que nada foi definido ainda).
-* */
-
+    
 }
 
