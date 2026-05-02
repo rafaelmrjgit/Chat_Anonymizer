@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="dark_background">#1F1F1F</color>
-    <color name="dark_surface">#2D2D2D</color>
-    <color name="primary">#A8C7FA</color>
-    <color name="on_primary">#062E6F</color>
-    <color name="secondary">#7CACF8</color>
-    <color name="text_primary">#E3E3E3</color>
-    <color name="text_secondary">#C4C7C5</color>
+    <!-- Tons para o Tema Claro -->
+    <color name="wa_green_primary">#008069</color>
+    <color name="wa_bg_light">#F0F2F5</color>
+    <color name="wa_surface_light">#FFFFFF</color>
+
+    <!-- Tons para o Tema Escuro -->
+    <color name="wa_bg_dark">#0B141A</color>
+    <color name="wa_surface_dark">#1F2C34</color>
+    <color name="wa_green_light_accent">#00A884</color>
+    <color name="wa_on_surface_dark">#E9EDEF</color>
+
+    <!-- Cores Auxiliares -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey_text_light">#667781</color>
+    <color name="grey_text_dark">#8696A0</color>
+
+    <!-- Cores fixas para recursos de sistema (Launcher, Notifications) -->
+    <color name="ic_background">#008069</color>
+
 </resources>

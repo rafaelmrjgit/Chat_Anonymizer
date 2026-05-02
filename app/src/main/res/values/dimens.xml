@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- spacing -->
+    <dimen name="spacing_none">0dp</dimen>
+    <dimen name="spacing_very_tiny">2dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_main">20dp</dimen>
+    <dimen name="spacing_main_large">28dp</dimen>
+    <!-- spacing end  -->
+
+
+    <!-- components -->
+    <!-- cards -->
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <!-- buttons -->
+    <dimen name="button_min_height">48dp</dimen>
+    <dimen name="button_icon_size">24dp</dimen>
+    <!-- recyclerview / lists -->
+    <dimen name="chat_height">300dp</dimen>
+    <!-- components end  -->
+
+
+    <!-- text size -->
+    <dimen name="text_display">40sp</dimen>
+    <dimen name="text_headline">28sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_label">11sp</dimen>
+    <!-- text size end -->
+
+</resources>
