@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/spacing_small"
-    android:layout_marginVertical="@dimen/spacing_tiny"
+    android:layout_marginVertical="@dimen/spacing_very_tiny"
     app:cardBackgroundColor="?attr/colorSurface"
     app:strokeColor="?attr/colorOutline"
     app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardUseCompatPadding="false"
     app:strokeWidth="1dp">
 
     <TextView

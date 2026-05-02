@@ -21,5 +21,21 @@
 
         <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/ic_background</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/ic_launcher_foreground</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Garante que a barra de status fique escura no modo dark -->
+        <item name="android:statusBarColor">@color/wa_bg_dark</item>
+
+        <!-- Tipografia Global (Material 3) -->
+        <item name="textAppearanceHeadlineSmall">@style/AppHeadlineSmall</item>
+        <item name="textAppearanceTitleMedium">@style/AppTitleMedium</item>
+        <item name="textAppearanceBodyLarge">@style/AppBodyLarge</item>
+        <item name="textAppearanceLabelMedium">@style/AppLabelMedium</item>
+
+        <!-- Estilos Globais de Componentes -->
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+        <item name="materialSwitchStyle">@style/Widget.App.Switch</item>
+        <item name="materialButtonStyle">@style/botaoCustomizado</item>
+
     </style>
 </resources>

@@ -32,6 +32,12 @@
 
         <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/ic_background</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/ic_launcher_foreground</item>
+
+        <!-- faz os ícones da barra de status ficarem escuros -->
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- garante que a barra de status tenha a mesma cor da toolbar -->
+        <item name="android:statusBarColor">@color/wa_green_primary</item>
+
     </style>
 
     <!-- Estilo Global para Cards -->

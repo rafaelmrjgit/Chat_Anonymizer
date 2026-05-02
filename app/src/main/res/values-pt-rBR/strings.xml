@@ -20,4 +20,5 @@
     <string name="app_theme">Tema</string>
     <string name="default_filename">conversa_anonimizada.txt</string>
     <string name="msg_error_save">Erro ao salvar arquivo</string>
+    <string name="msg_error_share">Erro ao preparar compartilhamento</string>
 </resources>

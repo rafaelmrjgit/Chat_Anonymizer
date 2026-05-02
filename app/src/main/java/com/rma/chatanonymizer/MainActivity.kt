@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.FileProvider
 import androidx.core.content.edit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
+import java.io.File
 import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
@@ -117,14 +119,39 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun shareAnonymizedText() {
-        val fullText = anonymizedLines.joinToString("\n")
-        val intent = Intent(Intent.ACTION_SEND).apply {
-            type = "text/plain"
-            putExtra(Intent.EXTRA_TEXT, fullText)
+        lifecycleScope.launch {
+            try {
+                val file = withContext(Dispatchers.IO) {
+                    val tempFile = File(cacheDir, getString(R.string.default_filename))
+                    tempFile.writeText(anonymizedLines.joinToString("\n"))
+                    tempFile
+                }
+
+                val contentUri = FileProvider.getUriForFile(
+                    this@MainActivity,
+                    "${packageName}.fileprovider",
+                    file
+                )
+
+                val intent = Intent(Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_STREAM, contentUri)
+                    addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                }
+                startActivity(Intent.createChooser(intent, getString(R.string.btn_share)))
+            } catch (e: Exception) {
+                Toast.makeText(
+                    this@MainActivity,
+                    R.string.msg_error_share,
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
-        startActivity(Intent.createChooser(intent, getString(R.string.btn_share)))
     }
+
+
 
     // ESCREVE O CONTEÚDO NO URI SELECIONADO PELO USUÁRIO
     private fun writeFile(uri: Uri) {
