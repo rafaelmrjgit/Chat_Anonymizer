@@ -7,6 +7,8 @@
 
 ### 📝 Description
 
+Chat Anonymizer was developed in a context of growing public concern about sharing personal data with AI systems. Recent incidents involving AI models unintentionally exposing private user information highlight the importance of anonymizing sensitive content before sending it to external tools.
+
 Chat Anonymizer is an Android application designed to protect user privacy when sharing WhatsApp conversations for analysis. It allows users to import .txt chat files and replaces all sensitive information (names, phone numbers, emails, and timestamps) with generic identifiers. The resulting text is perfectly prepared for safe analysis by external Artificial Intelligence (AI) tools or research purposes. This app does not access WhatsApp directly or read chats automatically. Currently, it does not process media (images, audio, video).
 
 ### ✨ Key Features
@@ -32,6 +34,8 @@ Users are responsible for reviewing the anonymized text and choosing an external
 ## Português
 
 ### 📝 Descrição
+
+O Chat Anonymizer surgiu em um contexto de crescente preocupação pública sobre o envio de dados pessoais para sistemas de IA. Casos recentes em que modelos de IA expuseram informações privadas reforçam a importância de anonimizar conteúdos sensíveis antes de enviá-los para ferramentas externas.
 
 O Chat Anonymizer é um aplicativo Android desenvolvido para proteger a privacidade do usuário ao compartilhar conversas do WhatsApp para análise. Ele permite importar arquivos .txt de conversas exportadas e substitui todas as informações sensíveis (nomes, números de telefone, e-mails e registros de data/hora) por identificadores genéricos. O texto resultante é preparado para uma análise segura por ferramentas de Inteligência Artificial (IA) externas ou para fins de pesquisa. O app não acessa o WhatsApp diretamente nem lê conversas automaticamente. Atualmente, ele não processa mídias (imagens, áudio, vídeo).
 
