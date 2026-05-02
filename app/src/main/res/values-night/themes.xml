@@ -2,10 +2,10 @@
 
     <style name="Base.Theme.ChatAnonymizer" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Cores Principais -->
-        <item name="colorPrimary">@color/wa_green_light_accent</item>
-        <item name="colorOnPrimary">@color/wa_bg_dark</item>
-        <item name="colorSecondaryContainer">@color/wa_green_light_accent</item>
-        <item name="colorOnSecondaryContainer">@color/wa_bg_dark</item>
+        <item name="colorPrimary">@color/wa_green_dark_primary</item>
+        <item name="colorOnPrimary">@color/wa_on_surface_dark</item>
+        <item name="colorSecondaryContainer">@color/wa_green_dark_primary</item>
+        <item name="colorOnSecondaryContainer">@color/wa_on_surface_dark</item>
 
         <!-- Superfícies -->
         <item name="colorSurface">@color/wa_surface_dark</item>
@@ -28,7 +28,7 @@
 
         <!-- Tipografia Global (Material 3) -->
         <item name="textAppearanceHeadlineSmall">@style/AppHeadlineSmall</item>
-        <item name="textAppearanceTitleMedium">@style/AppTitleMedium</item>
+        <item name="textAppearanceTitleMedium">@style/AppTitleMediumNight</item>
         <item name="textAppearanceBodyLarge">@style/AppBodyLarge</item>
         <item name="textAppearanceLabelMedium">@style/AppLabelMedium</item>
 
@@ -36,6 +36,11 @@
         <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
         <item name="materialSwitchStyle">@style/Widget.App.Switch</item>
         <item name="materialButtonStyle">@style/botaoCustomizado</item>
-
     </style>
+
+    <!-- estilo para títulos no modo escuro -->
+    <style name="AppTitleMediumNight" parent="AppTitleMedium">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
 </resources>

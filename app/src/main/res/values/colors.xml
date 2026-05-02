@@ -9,7 +9,8 @@
     <color name="wa_bg_dark">#0B141A</color>
     <color name="wa_surface_dark">#1F2C34</color>
     <color name="wa_green_light_accent">#00A884</color>
-    <color name="wa_on_surface_dark">#E9EDEF</color>
+    <color name="wa_on_surface_dark">#C1C1C1</color>
+    <color name="wa_green_dark_primary">#005C4B</color>
 
     <!-- Cores Auxiliares -->
     <color name="white">#FFFFFF</color>
