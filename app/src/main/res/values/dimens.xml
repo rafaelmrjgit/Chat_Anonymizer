@@ -21,6 +21,8 @@
     <dimen name="button_icon_size">24dp</dimen>
     <!-- recyclerview / lists -->
     <dimen name="chat_height">300dp</dimen>
+    <!-- containers -->
+    <dimen name="container_elevation">8dp</dimen>
     <!-- components end  -->
 
 

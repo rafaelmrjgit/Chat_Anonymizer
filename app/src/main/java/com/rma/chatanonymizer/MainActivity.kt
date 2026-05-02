@@ -58,15 +58,15 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setupListeners() {
-        binding.btnImport.setOnClickListener {
+        binding.buttonImport.setOnClickListener {
             importLauncher.launch(arrayOf("text/plain"))
         }
 
-        binding.btnShare.setOnClickListener {
+        binding.buttonShare.setOnClickListener {
             shareAnonymizedText()
         }
 
-        binding.btnSave.setOnClickListener {
+        binding.buttonSave.setOnClickListener {
             if (anonymizedLines.isNotEmpty()) {
                 // Abre o seletor do Android para o usuário escolher onde salvar
                 saveLauncher.launch(getString(R.string.default_filename))
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun processFile(uri: Uri) {
         binding.progressBar.visibility = View.VISIBLE
-        binding.btnImport.isEnabled = false
+        binding.buttonImport.isEnabled = false
 
         lifecycleScope.launch {
             try {
@@ -105,17 +105,16 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, R.string.msg_error_import, Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressBar.visibility = View.GONE
-                binding.btnImport.isEnabled = true
+                binding.buttonImport.isEnabled = true
             }
         }
     }
 
     private fun updateUI() {
         if (anonymizedLines.isNotEmpty()) {
-            binding.rvPreview.visibility = View.VISIBLE
-            binding.cardViewResult.visibility = View.VISIBLE
-            binding.rvPreview.layoutManager = LinearLayoutManager(this)
-            binding.rvPreview.adapter = ChatAdapter(anonymizedLines)
+            binding.recyclerViewPreview.visibility = View.VISIBLE
+            binding.recyclerViewPreview.layoutManager = LinearLayoutManager(this)
+            binding.recyclerViewPreview.adapter = ChatAdapter(anonymizedLines)
         }
     }
 
@@ -215,4 +214,3 @@ class MainActivity : AppCompatActivity() {
     }
     
 }
-
