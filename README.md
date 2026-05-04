@@ -11,6 +11,11 @@ Chat Anonymizer was developed in a context of growing public concern about shari
 
 Chat Anonymizer is an Android application designed to protect user privacy when sharing WhatsApp conversations for analysis. It allows users to import .txt chat files and replaces all sensitive information (names, phone numbers, emails, and timestamps) with generic identifiers. The resulting text is perfectly prepared for safe analysis by external Artificial Intelligence (AI) tools or research purposes. This app does not access WhatsApp directly or read chats automatically. Currently, it does not process media (images, audio, video).
 
+### 🎥 Video Demonstration
+Click the thumbnail below to watch the demo on YouTube:
+
+[![Demo Video](https://img.youtube.com/vi/IEBI7cXBCU8/hqdefault.jpg)](https://youtu.be/IEBI7cXBCU8)
+
 ### ✨ Key Features
 
 - Deep anonymization: replaces participant names and numbers with consistent labels (e.g., "Person 1", "Person 2").
@@ -38,6 +43,11 @@ Users are responsible for reviewing the anonymized text and choosing an external
 O Chat Anonymizer surgiu em um contexto de crescente preocupação pública sobre o envio de dados pessoais para sistemas de IA. Casos recentes em que modelos de IA expuseram informações privadas reforçam a importância de anonimizar conteúdos sensíveis antes de enviá-los para ferramentas externas.
 
 O Chat Anonymizer é um aplicativo Android desenvolvido para proteger a privacidade do usuário ao compartilhar conversas do WhatsApp para análise. Ele permite importar arquivos .txt de conversas exportadas e substitui todas as informações sensíveis (nomes, números de telefone, e-mails e registros de data/hora) por identificadores genéricos. O texto resultante é preparado para uma análise segura por ferramentas de Inteligência Artificial (IA) externas ou para fins de pesquisa. O app não acessa o WhatsApp diretamente nem lê conversas automaticamente. Atualmente, ele não processa mídias (imagens, áudio, vídeo).
+
+### 🎥 Demonstração em Vídeo
+Assista ao vídeo demonstrando o funcionamento do app:
+
+[![Demo Video](https://img.youtube.com/vi/IEBI7cXBCU8/hqdefault.jpg)](https://youtu.be/IEBI7cXBCU8)
 
 ### ✨ Funcionalidades Principais
 - Anonimização profunda: substitui nomes e números de participantes por rótulos consistentes (ex: "Pessoa 1", "Pessoa 2").
